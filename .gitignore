@@ -21,3 +21,4 @@ inheritance-graph.dot
 
 # dotenv
 .env*
+!.env.template
