@@ -2,6 +2,7 @@
 .DS_Store
 *.swp
 *.db
+*.log
 
 # python for tools
 __pycache__

@@ -3,12 +3,12 @@ import { HardhatUserConfig } from 'hardhat/types'
 import '@openzeppelin/hardhat-upgrades'
 import '@nomiclabs/hardhat-ethers'
 import '@nomiclabs/hardhat-waffle'
-import '@nomiclabs/hardhat-ganache'
 import '@nomiclabs/hardhat-solhint'
 import '@typechain/hardhat'
 import 'hardhat-deploy'
 import 'hardhat-gas-reporter'
 import 'solidity-coverage'
+import 'solidity-docgen'
 import { nodeUrl, accounts } from './utils/network'
 
 import 'dotenv/config'
@@ -42,10 +42,10 @@ const config: HardhatUserConfig = {
       // gasPrice: 11000000000,
       forking: process.env.HARDHAT_FORK
         ? {
-            // TODO once PR merged : network: process.env.HARDHAT_FORK,
-            url: nodeUrl(process.env.HARDHAT_FORK),
-            blockNumber: process.env.HARDHAT_FORK_NUMBER ? parseInt(process.env.HARDHAT_FORK_NUMBER) : undefined
-          }
+          // TODO once PR merged : network: process.env.HARDHAT_FORK,
+          url: nodeUrl(process.env.HARDHAT_FORK),
+          blockNumber: process.env.HARDHAT_FORK_NUMBER ? parseInt(process.env.HARDHAT_FORK_NUMBER) : undefined
+        }
         : undefined,
       saveDeployments: false,
       tags: ['local', 'forked']
