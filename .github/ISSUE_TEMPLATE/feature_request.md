@@ -2,10 +2,13 @@
 name: Feature request
 about: Suggest an idea for this project
 title: ''
-labels: ''
+labels: 'triage needed'
 assignees: ''
-
 ---
+
+**⚠️ CAUTION: Any issue related to trading / price / not related with the code directly within this repository will be closed without comment**
+
+**🆘 SECURITY: Any bug related to smart contract security should be addressed to security@windingtree.com**
 
 **Is your feature request related to a problem? Please describe.**
 A clear and concise description of what the problem is. Ex. I'm always frustrated when [...]
