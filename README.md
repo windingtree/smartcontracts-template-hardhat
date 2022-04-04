@@ -12,6 +12,17 @@ used include:
 - typescript / typechain
 - solhint / gas-reporter / soliditiy-coverage
 
+## Commits
+
+To commit to the repository after staging the commit:
+
+```bash
+yarn commit
+```
+
+Select the appropriate type of commit message, any issues to close, and note any breaking
+changes.
+
 ## Deployment requirements
 
 1. Ensure **100% solidity coverage** in tests prior to production deployment.
