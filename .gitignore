@@ -1,0 +1,23 @@
+# misc
+.DS_Store
+*.swp
+*.db
+
+# python for tools
+__pycache__
+.pytest_cache
+.venv/
+
+# node
+node_modules/
+
+# hardhat / typechain artifacts
+artifacts/
+cache/
+typechain/
+reports/
+coverage*
+inheritance-graph.dot
+
+# dotenv
+.env*

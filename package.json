@@ -1,0 +1,45 @@
+{
+  "name": "@windingtree/smartcontracts-hardhat-template",
+  "description": "🔧 Template for protocol contracts",
+  "license": "GPL-3.0-only",
+  "version": "0.0.1",
+  "homepage": "https://windingtree.com/",
+  "keywords": [
+    "windingtree",
+    "ethereum"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/windingtree/smartcontracts-hardhat-template"
+  },
+  "files": [
+    "contracts/interfaces",
+    "contracts/libraries",
+    "artifacts/contracts/**/*.json",
+    "!artifacts/contracts/**/*.dbg.json"
+  ],
+  "engines": {
+    "node": ">=10"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^4.5.0",
+    "@openzeppelin/contracts-upgradeable": "^4.5.2"
+  },
+  "devDependencies": {
+    "@nomiclabs/hardhat-ethers": "npm:hardhat-deploy-ethers@^0.3.0-beta.13",
+    "@nomiclabs/hardhat-etherscan": "^3.0.3",
+    "@nomiclabs/hardhat-solhint": "^2.0.0",
+    "@nomiclabs/hardhat-waffle": "^2.0.3",
+    "@typechain/ethers-v5": "^10.0.0",
+    "@typechain/hardhat": "^6.0.0",
+    "conventional-changelog-cli": "^2.2.2",
+    "ethers": "^5.6.2",
+    "git-cz": "^4.8.0"
+  },
+  "scripts": {
+    "compile": "hardhat compile",
+    "test": "hardhat test",
+    "commit": "git-cz",
+    "changelog": "conventional-changelog -p angular -r 2 -i CHANGELOG.md -s"
+  }
+}
