@@ -21,17 +21,17 @@ const config: HardhatUserConfig = {
         settings: {
           optimizer: {
             enabled: true,
-            runs: 200
-          }
-        }
-      }
-    ]
+            runs: 200,
+          },
+        },
+      },
+    ],
   },
   namedAccounts: {
     deployer: 0,
     alice: 1,
     bob: 2,
-    carol: 3
+    carol: 3,
   },
   networks: {
     hardhat: {
@@ -44,78 +44,78 @@ const config: HardhatUserConfig = {
         ? {
             // TODO once PR merged : network: process.env.HARDHAT_FORK,
             url: nodeUrl(process.env.HARDHAT_FORK),
-            blockNumber: process.env.HARDHAT_FORK_NUMBER ? parseInt(process.env.HARDHAT_FORK_NUMBER) : undefined
+            blockNumber: process.env.HARDHAT_FORK_NUMBER ? parseInt(process.env.HARDHAT_FORK_NUMBER) : undefined,
           }
         : undefined,
       saveDeployments: false,
-      tags: ['local', 'forked']
+      tags: ['local', 'forked'],
     },
     ganache: {
       url: 'http://127.0.0.1:7545/',
       saveDeployments: true,
-      tags: ['local']
+      tags: ['local'],
     },
     localhost: {
       url: nodeUrl('localhost'),
       accounts: accounts(),
       saveDeployments: true,
-      tags: ['local']
+      tags: ['local'],
     },
     staging: {
       url: nodeUrl('rinkeby'),
       accounts: accounts('rinkeby'),
-      tags: ['staging']
+      tags: ['staging'],
     },
     production: {
       url: nodeUrl('mainnet'),
       accounts: accounts('mainnet'),
-      tags: ['production']
+      tags: ['production'],
     },
     mainnet: {
       url: nodeUrl('mainnet'),
       accounts: accounts('mainnet'),
-      tags: ['production']
+      tags: ['production'],
     },
     rinkeby: {
       url: nodeUrl('rinkeby'),
       accounts: accounts('rinkeby'),
-      tags: ['staging']
+      tags: ['staging'],
     },
     kovan: {
       url: nodeUrl('kovan'),
       accounts: accounts('kovan'),
-      tags: ['staging']
+      tags: ['staging'],
     },
     goerli: {
       url: nodeUrl('goerli'),
       accounts: accounts('goerli'),
-      tags: ['staging']
+      tags: ['staging'],
     },
     sokol: {
       url: nodeUrl('sokol'),
       accounts: accounts('sokol'),
-      tags: ['staging']
+      tags: ['staging'],
     },
     gnosis: {
       url: nodeUrl('gnosis'),
       accounts: accounts('gnosis'),
-      tags: ['production']
-    }
+      tags: ['production'],
+    },
   },
   gasReporter: {
     currency: 'USD',
     gasPrice: 100,
     enabled: !!process.env.REPORT_GAS,
     coinmarketcap: process.env.COINMARKETCAP_API_KEY,
-    maxMethodDiff: 10
+    maxMethodDiff: 10,
   },
   typechain: {
     outDir: 'typechain',
-    target: 'ethers-v5'
+    target: 'ethers-v5',
   },
   mocha: {
-    timeout: 0
-  }
+    timeout: 0,
+  },
 }
 
 export default config
