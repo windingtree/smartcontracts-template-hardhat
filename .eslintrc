@@ -44,13 +44,6 @@
       "error",
       "always"
     ],
-    "quotes": [
-      "error",
-      "double",
-      {
-        "allowTemplateLiterals": true
-      }
-    ],
     "semi": [
       "error",
       "never"
