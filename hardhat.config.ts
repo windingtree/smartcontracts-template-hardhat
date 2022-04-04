@@ -42,10 +42,10 @@ const config: HardhatUserConfig = {
       // gasPrice: 11000000000,
       forking: process.env.HARDHAT_FORK
         ? {
-          // TODO once PR merged : network: process.env.HARDHAT_FORK,
-          url: nodeUrl(process.env.HARDHAT_FORK),
-          blockNumber: process.env.HARDHAT_FORK_NUMBER ? parseInt(process.env.HARDHAT_FORK_NUMBER) : undefined
-        }
+            // TODO once PR merged : network: process.env.HARDHAT_FORK,
+            url: nodeUrl(process.env.HARDHAT_FORK),
+            blockNumber: process.env.HARDHAT_FORK_NUMBER ? parseInt(process.env.HARDHAT_FORK_NUMBER) : undefined
+          }
         : undefined,
       saveDeployments: false,
       tags: ['local', 'forked']
