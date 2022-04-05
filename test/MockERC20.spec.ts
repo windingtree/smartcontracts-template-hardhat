@@ -31,7 +31,8 @@ describe('MockERC20', function () {
   let carol: { address: string } & { erc20: IERC20 }
 
   beforeEach('load fixture', async () => {
-    ({ alice, bob, carol } = await setup())
+    // eslint-disable-next-line @typescript-eslint/no-extra-semi
+    ;({ alice, bob, carol } = await setup())
   })
 
   context('Metadata', async () => {
