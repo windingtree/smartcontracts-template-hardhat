@@ -31,7 +31,7 @@ describe('MockERC20', function () {
   let carol: { address: string } & { erc20: IERC20 }
 
   beforeEach('load fixture', async () => {
-    ({ alice, bob, carol } = await setup())
+    ;({ alice, bob, carol } = await setup())
   })
 
   context('Metadata', async () => {
