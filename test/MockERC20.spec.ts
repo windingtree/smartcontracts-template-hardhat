@@ -10,7 +10,7 @@ const setup = deployments.createFixture(async () => {
   await deployments.fixture('MockERC20')
   const { deployer, alice, bob, carol } = await getNamedAccounts()
   const contracts = {
-    erc20: <IERC20>await ethers.getContract('MockERC20')
+    erc20: await ethers.getContract('MockERC20') as IERC20
   }
   const users = await setupUsers(await getUnnamedAccounts(), contracts)
 
@@ -31,7 +31,7 @@ describe('MockERC20', function () {
   let carol: { address: string } & { erc20: IERC20 }
 
   beforeEach('load fixture', async () => {
-    ;({ users, alice, bob, carol } = await setup())
+    ({ users, alice, bob, carol } = await setup())
   })
 
   context('Metadata', async () => {

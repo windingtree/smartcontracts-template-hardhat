@@ -27,6 +27,12 @@ yarn commit
 Select the appropriate type of commit message, any issues to close, and note any breaking
 changes.
 
+## Tests
+
+Test are handled with `chai` and includes `solidity-coverage`, enabling coverage
+reports to be done for the code-base. By default, contracts located in `contracts/test`
+are ignored by `solidity-coverage`.
+
 ## Deployment
 
 ### Requirements
@@ -47,4 +53,4 @@ This repository uses `hardhat-deploy` for reproducible deployment tests, as well
    complex logic when deploying across multiple chains, and/or testnets).
 
 Deployment scripts are contained within `deploy`, and these deployment scripts are executed
-prior to any tests.
+prior to any tests, and are executed in **alphabetical order**.
