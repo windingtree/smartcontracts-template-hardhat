@@ -25,13 +25,13 @@ const setup = deployments.createFixture(async () => {
 })
 
 describe('MockERC20', function () {
-  let users: ({ address: string } & { erc20: IERC20 })[]
+  // let users: ({ address: string } & { erc20: IERC20 })[]
   let alice: { address: string } & { erc20: IERC20 }
   let bob: { address: string } & { erc20: IERC20 }
   let carol: { address: string } & { erc20: IERC20 }
 
   beforeEach('load fixture', async () => {
-    ;({ users, alice, bob, carol } = await setup())
+    ({ alice, bob, carol } = await setup())
   })
 
   context('Metadata', async () => {
