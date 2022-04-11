@@ -54,3 +54,31 @@ This repository uses `hardhat-deploy` for reproducible deployment tests, as well
 
 Deployment scripts are contained within `deploy`, and these deployment scripts are executed
 prior to any tests, and are executed in **alphabetical order**.
+
+### How to use
+
+Unit testing:
+
+```
+yarn test
+```
+
+Coverage analysis:
+
+```
+yarn hardhat coverage
+```
+
+Run deploy scripts and deploy to `mainnet`:
+
+```
+yarn hardhat deploy --network mainnet
+```
+
+Now verify the contracts on Etherscan:
+
+```
+yarn hardhat --network mainnet etherscan-verify
+```
+
+**NOTE: Substitute `mainnet` above for the applicable target network.**
